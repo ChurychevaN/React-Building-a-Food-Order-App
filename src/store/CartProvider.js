@@ -22,10 +22,10 @@ return defaultCartState;
 const CartProvider = ( props ) => {
 	const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
 
-	const addItemToCartHandler = item => {
+	const addItemToCartHandler = (item) => {
 		dispatchCartAction({type: 'ADD', item: item});
 	};
-	const removeItemFromCartHandler = id => {
+	const removeItemFromCartHandler = (id) => {
 		dispatchCartAction ({type: 'REMOVE', id: id});
 	};
 
